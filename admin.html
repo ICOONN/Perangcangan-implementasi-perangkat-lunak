@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Admin Dashboard</h1>
+        <h2>Users</h2>
+        <ul>
+            <?php foreach($users as $user): ?>
+                <li><?= $user['name']; ?> - <?= $user['role']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <h2>Products</h2>
+        <ul>
+            <?php foreach($products as $product): ?>
+                <li><?= $product['name']; ?> - <?= $product['price']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <h2>Orders</h2>
+        <ul>
+            <?php foreach($orders as $order): ?>
+                <li>Order ID: <?= $order['id']; ?> - <?= $order['status']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</body>
+</html>
